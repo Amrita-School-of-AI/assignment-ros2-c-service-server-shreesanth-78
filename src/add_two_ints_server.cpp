@@ -27,14 +27,6 @@ private:
     std::shared_ptr<AddTwoInts::Response> response)
   {
     response->sum = request->a + request->b;
-
-    RCLCPP_INFO(
-      this->get_logger(),
-      "Request received: a=%ld b=%ld | Response: sum=%ld",
-      request->a,
-      request->b,
-      response->sum
-    );
   }
 
   rclcpp::Service<AddTwoInts>::SharedPtr service_;
@@ -47,4 +39,3 @@ int main(int argc, char **argv)
   rclcpp::shutdown();
   return 0;
 }
-
