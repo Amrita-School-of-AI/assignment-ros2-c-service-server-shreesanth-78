@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>assignment-ros2-c-service-server-shreesanth-78</name>
+  <name>ros2_service_server</name>
   <version>0.0.0</version>
   <description>Assignment: ROS2 Service Server</description>
   <maintainer email="student@university.edu">Student Name</maintainer>
