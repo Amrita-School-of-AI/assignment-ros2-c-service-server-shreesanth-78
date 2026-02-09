@@ -3,22 +3,20 @@
 
 using AddTwoInts = example_interfaces::srv::AddTwoInts;
 
-class AddTwoIntsServer : public rclcpp::Node
+class ServiceServer : public rclcpp::Node
 {
 public:
-  AddTwoIntsServer() : Node("add_two_ints_server")
+  ServiceServer() : Node("service_server")
   {
     service_ = this->create_service<AddTwoInts>(
       "add_two_ints",
       std::bind(
-        &AddTwoIntsServer::handle_service,
+        &ServiceServer::handle_service,
         this,
         std::placeholders::_1,
         std::placeholders::_2
       )
     );
-
-    RCLCPP_INFO(this->get_logger(), "Add Two Ints Service Server Ready");
   }
 
 private:
@@ -35,7 +33,8 @@ private:
 int main(int argc, char **argv)
 {
   rclcpp::init(argc, argv);
-  rclcpp::spin(std::make_shared<AddTwoIntsServer>());
+  rclcpp::spin(std::make_shared<ServiceServer>());
   rclcpp::shutdown();
   return 0;
 }
+
