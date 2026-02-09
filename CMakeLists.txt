@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.8)
-project(ros2_service_server)
+project(assignment-ros2-c-service-server-shreesanth-78)
+
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -14,16 +15,16 @@ find_package(example_interfaces REQUIRED)
 # 1. Add executable using src/add_two_ints_server.cpp
 # 2. Add dependencies (ament_target_dependencies) for rclcpp and example_interfaces
 # 3. Install the target to the DESTINATION lib/${PROJECT_NAME}
-add_executable(service_server src/service_server.cpp)
+add_executable(add_two_ints_server src/add_two_ints_server.cpp)
 
 ament_target_dependencies(
-  service_server
+  add_two_ints_server
   rclcpp
   example_interfaces
 )
 
 install(TARGETS
-  service_server
+  add_two_ints_server
   DESTINATION lib/${PROJECT_NAME}
 )
 
