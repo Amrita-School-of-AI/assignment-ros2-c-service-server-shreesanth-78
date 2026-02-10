@@ -16,7 +16,5 @@ install(TARGETS
   add_two_ints_server
   DESTINATION lib/${PROJECT_NAME}
 )
-
-
 ament_package()
 
